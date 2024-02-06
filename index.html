@@ -2,13 +2,26 @@
 <html>
 
 <head>
-    <title>Will you be my Pookie?</title>
+    <title id="title"></title>
     <link rel="stylesheet" href="stylesheet.css">
+    <script>
+        window.onload = function(){
+            let myVariable = "test";
+            document.getElementById("output").innerHTML = myVariable;
+            document.getElementById("title").innerHTML = myVariable;
+        };
+        function clickYes(){
+            let text = "Yayy! >.<"
+            document.getElementById("output").innerHTML = text;
+            document.getElementById("title").innerHTML = text;
+        }
+    </script>
 </head>
 
 <body>
+
 <div class="heading center">
-    <h1>Will you be my Valentine ?</h1>
+    <h1 id="output"></h1>
 </div>
 
 <div class="gif center">
@@ -16,9 +29,7 @@
 </div>
 
 <div class="btns center">
-    <form action="/test/yes.html">
-        <input class="btn y" type="submit" value="Yeees" >
-    </form>
+    <button onclick="clickYes()" class="btn y">Yes!</button>
 
     <button class="btn n">No!</button>
 </div>
