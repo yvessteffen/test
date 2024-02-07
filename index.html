@@ -15,8 +15,7 @@
         }
 
         function clickYes(){
-            let text = "Yayy! >.<"
-            changeElement("title", text) 
+            changeElement("output", "Yayy! >.<") 
             document.getElementById("gif").src = "ressources/yay.gif"     
         }
     </script>
@@ -30,7 +29,7 @@
 
 <div class="polaroid">
     <div class="border">
-        <img class="gif" height="250" src="ressources/cute.gif" alt="cute bear"/>
+        <img id="gif" class="gif" height="250" src="ressources/cute.gif" alt="cute bear"/>
     </div>
     <div class="btns">
         <button onclick="clickYes()" class="btn y">Yes!</button>
