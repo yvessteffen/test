@@ -1,6 +1,6 @@
 
 window.onload = function(){
-    let myVariable = "Will you be my Valentine ?";
+    let myVariable = "Will you be my <br /> Valentine ?";
     document.getElementById("output").innerHTML = myVariable;
     document.getElementById("title").innerHTML = myVariable;
 };
