@@ -1,16 +1,98 @@
-.center {
-    text-align: center
-}
 
-.heading {
-    background: #555966;
-    border-radius: 15px;
-    padding: 16px 32px;
-    width: 50%;
-}
+body {
+    height: 100vh;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    font: 2vw system-ui;
+    background-color: #f9cdad;
+  }
+
+  body p {
+    transform: translatey(0px);
+    animation: float 5s ease-in-out infinite;
+  
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 15px;
+    color: #774f38;
+    background-color: #ece5ce;
+    padding: 50px;
+    border-radius: 11px;
+    position: relative;
+    box-shadow: 20px 20px #83af9b;
+    font-family: "Baloo 2";
+    border: 1px solid #c8c8a9;
+  }
+  body p:after {
+    transform: translatey(0px);
+    animation: float2 5s ease-in-out infinite;
+    content: ".";
+    font-weight: bold;
+    -webkit-text-stroke: 0.5px #c8c8a9;
+    -webkit-text-fill-color: #ece5ce;
+    border: 1px solid #c8c8a9;
+    text-shadow: 22px 22px #83af9b;
+    text-align: center;
+    font-size: 55px;
+    width: 55px;
+    height: 11px;
+    line-height: 30px;
+    border-radius: 11px;
+    background-color: #ece5ce;
+    position: absolute;
+    display: block;
+    bottom: -30px;
+    left: 0;
+    box-shadow: 22px 22px #83af9b;
+    z-index: -2;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translatey(0px);
+    }
+    50% {
+      transform: translatey(-20px);
+    }
+    100% {
+      transform: translatey(0px);
+    }
+  }
+  
+  @keyframes float2 {
+    0% {
+      line-height: 30px;
+      transform: translatey(0px);
+    }
+    55% {
+      transform: translatey(-20px);
+    }
+    60% {
+      line-height: 10px;
+    }
+    100% {
+      line-height: 30px;
+      transform: translatey(0px);
+    }
+  }
+
+  @keyframes floatP {
+    25% {
+        transform: rotate(2deg);
+    }
+    50% {}
+    75%{        transform: rotate(-2deg);
+    }
+    100% {
+    }
+  }
 
 .heading:active {
-    transform: rotateY(180deg);
+    transform: rotateY(360deg);
+    transition-duration: 1s;
 }
 
 .gif:active {
@@ -24,6 +106,7 @@
     cursor: pointer;
     box-shadow: 0 9px #999;
     font-size: 24px;
+    margin: 15px 0px 
 }
 
 .y {
@@ -48,3 +131,32 @@
     background-color: #f44336;
     color: white;
 }
+
+.polaroid {
+    animation: floatP 5s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+
+    background: #ffffff;
+    display: inline-block;
+    margin: 55px 75px 30px;
+    padding: 15px 15px 15px;
+    text-align: center;
+    text-decoration: none;
+    -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+    -moz-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+    -webkit-transition: all .20s linear;
+    -moz-transition: all .20s linear;
+    transition: all .20s linear;
+    z-index: 0;
+    position: relative;
+  }
+
+  .polaroid img {
+    display: block;
+    width: 250px;
+    border: 2px solid rgba(96, 96, 96, 0.2)
+  }
+
+  .c {
+    display: end;
+  }

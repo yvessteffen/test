@@ -6,14 +6,18 @@
     <link rel="stylesheet" href="stylesheet.css">
     <script>
         window.onload = function(){
-            let myVariable = "test";
+            let myVariable = "Will you be my Valentine ?";
             document.getElementById("output").innerHTML = myVariable;
             document.getElementById("title").innerHTML = myVariable;
         };
+        function changeElement(id, string){
+            document.getElementById(id).innerHTML = string;
+        }
+
         function clickYes(){
             let text = "Yayy! >.<"
-            document.getElementById("output").innerHTML = text;
-            document.getElementById("title").innerHTML = text;
+            changeElement("title", text) 
+            document.getElementById("gif").src = "ressources/yay.gif"     
         }
     </script>
 </head>
@@ -21,9 +25,17 @@
 <body>
 
 <div class="heading center">
-    <h1 id="output"></h1>
+    <p id="output"></p>
 </div>
 
+<div class="polaroid">
+    <img class="gif" height="250" src="ressources/cute.gif" alt="cute bear"/>
+    <button onclick="clickYes()" class="btn y">Yes!</button>
+    <button class="btn n">No!</button>
+    <span class="c">©duduroid</span>
+  </div>
+
+<!-- 
 <div class="gif center">
     <img src="ressources/cute.gif" alt="cute bear">
 </div>
@@ -33,6 +45,6 @@
 
     <button class="btn n">No!</button>
 </div>
-
+-->
 </body>
 </html>
