@@ -1,8 +1,7 @@
 
 window.onload = function(){
-    let myVariable = "Will you be my <br /> Valentine ?";
-    document.getElementById("output").innerHTML = myVariable;
-    document.getElementById("title").innerHTML = myVariable;
+    document.getElementById("output").innerHTML = "Will you be my <br /> Valentine ?";
+    document.getElementById("title").innerHTML = "Will you be my Valentine ?";
 };
 
 function changeElement(id, string){
@@ -10,6 +9,7 @@ function changeElement(id, string){
 }
 
 function clickYes(){
+    document.getElementById("title").innerHTML = "Yayy! >.<";
     document.getElementById("output").remove()
     document.getElementById("gif").src = "ressources/yay.gif"
     document.getElementById("btn y","btn n").remove()
