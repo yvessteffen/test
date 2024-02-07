@@ -91,7 +91,7 @@ body {
     }
   }
 
-.gif:active {
+.gif:active, .gif:active {
     transform: rotateY(180deg);
 }
 
