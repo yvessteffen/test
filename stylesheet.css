@@ -110,11 +110,11 @@ body {
 }
 
 .y {
-    border: 2px solid #04AA6D;
+    border: 2px solid #83af9b;
 }
 
 .n {
-    border: 2px solid #f44336;
+    border: 2px solid #c56a63;
 }
 
 .btn:active {
@@ -123,12 +123,12 @@ body {
 }
 
 .y:hover {
-    background-color: #04AA6D;
+    background-color: #83af9b;
     color: white;
 }
 
 .n:hover {
-    background-color: #f44336;
+    background-color: #c56a63;
     color: white;
 }
 
