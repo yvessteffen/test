@@ -1,6 +1,7 @@
 window.onload = function(){
-    document.getElementById("output").innerHTML = "Will you be my <br /> Valentine ?";
-    document.getElementById("title").innerHTML = "Will you be my Valentine ?";
+    document.getElementById("output").innerHTML = "You've been blessed <br /> by" +
+        "<br /> a free raccoon hug";
+    document.getElementById("title").innerHTML = "You've been blessed by a free raccoon hug";
 };
 
 Array.prototype.random = function () {
@@ -10,20 +11,18 @@ Array.prototype.random = function () {
 function clickYes(){
     document.getElementById("title").innerHTML = "Yayy! >.<";
     document.getElementById("output").remove()
-    document.getElementById("gif").src = "ressources/yay.gif"
+    document.getElementById("gif").src = "ressources/hug.jpg"
     document.getElementById("btn y","btn n").remove()
-    document.getElementById("btns").innerText = "Yayy! >.<"
+    document.getElementById("btns").innerText = "*hugs*"
     document.getElementById('btns').classList.add('yes')
     document.getElementById('container').classList.add('spin')
 }
 
 let click = 0
 function clickNo(){
-    if (click == 0) {
-        click++
-        document.getElementById("title").innerHTML = "Sure ? :(";
-        document.getElementById("btn n").innerText = "Sure ? :("
-        document.getElementById("output").innerHTML = "Sure ? :(";
-    }
-    else funcs[Math.floor(Math.random() * funcs.length)]();
+    document.getElementById("title").innerHTML = "An error occured";
+    document.getElementById("btn n").innerText = "Accept"
+    document.getElementById("output").innerHTML = "An error occured";
+    document.getElementById("btn n").classList.add('y')
+    document.getElementById("btn n").setAttribute('onClick',"clickYes()")
 }

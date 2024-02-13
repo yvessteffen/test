@@ -1,5 +1,4 @@
 let funcs = [
-    drop,
     remove,
     hide
 ]
